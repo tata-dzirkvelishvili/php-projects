@@ -19,3 +19,5 @@ use App\Http\Controllers\QuizController;
 // });
 
 Route::get('/', [QuizController::class, 'index']);
+Route::get('/post/{post?}', [QuizController::class, "createOrUpdate"])->name('post');
+
