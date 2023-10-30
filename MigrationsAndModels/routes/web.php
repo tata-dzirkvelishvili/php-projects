@@ -19,5 +19,6 @@ use App\Http\Controllers\QuizController;
 // });
 
 Route::get('/', [QuizController::class, 'index']);
-Route::get('/post/{post?}', [QuizController::class, "createOrUpdate"])->name('post');
-
+Route::get('/quizzes/create', [QuizController::class, 'savePage']);
+Route::get('/quizzes/{id}/update', [QuizController::class, 'savePage']);
+Route::post('/quizzes', [QuizController::class, 'createOrUpdate']);
